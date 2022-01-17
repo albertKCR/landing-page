@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <style>
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 800px) {
             *{
             margin: 0;
             padding: 0;
@@ -42,7 +42,7 @@
                 margin-top: 100px;
             }
         }
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: 800px) {
         *{
             margin: 0;
             padding: 0;
@@ -62,9 +62,30 @@
             margin-top: auto;
             margin-bottom: auto;
         }
-        #form{}
-        #email{}
-        #submit{}
+        #form{
+            text-align: center;
+        }
+        #email{
+            margin-top: 100px;
+            width: 400px;
+            height: 25px;
+            font-family: poppins;
+            font-size: 18px;
+            border-radius: 5px;
+            border-color: black;
+        }
+        #submit{
+            margin-top: 10px;
+            background-color: aquamarine;
+            color: black;
+            height: 40px;
+            width: 400px;
+            font-family: poppins;
+            font-size: 18px;
+            border-radius: 5px;
+            border-color: black;
+            cursor: pointer;
+        }
         #nav-bar{
             display: block;
             text-align: center;
@@ -99,6 +120,12 @@
                 <a class="nav-link" href="#">Pricing</a>
             </nav>
     </header>
+    <section>
+        <form id="form" action=" https://www.freecodecamp.com/email-submit">
+            <input type="email" name="email" id="email" placeholder="Insert your email" required><br>
+            <input id="submit"type="submit" name="submit" value="Let's Go!">
+        </form>
+    </section>
     <section id="howItWorks">
         <iframe id="video" frameborder="0" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
     </section>
