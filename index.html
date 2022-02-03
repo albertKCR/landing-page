@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Landing Page</title>
     <style>
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 900px) {
             *{
             margin: 0;
             padding: 0;
@@ -44,8 +45,26 @@
                 height: 300px;
                 margin-top: 100px;
             }
+            #pricing{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 70px;
+            justify-content: center;
+            align-items: center;
         }
-    @media screen and (min-width: 800px) {
+        footer{
+            font-family: lato;
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+            justify-content: flex-end;
+            border-radius: 3px;
+            padding: 15px;
+            background-color: orange;
+        }
+    }
+    @media screen and (min-width: 900px) {
         *{
             margin: 0;
             padding: 0;
@@ -86,6 +105,25 @@
             height: 315px;
             margin-top: 100px;
         }
+        #pricing{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            margin-top: 70px;
+            justify-content: space-around;
+        }
+        footer{
+            font-family: lato;
+            margin-right: auto;
+            margin-left: auto;
+            width: 70%;
+            justify-content: flex-end;
+            border-radius: 3px;
+            padding: 15px;
+            background-color: orange;
+        }
     }
         #howItWorks{
             display: flex;
@@ -117,6 +155,19 @@
         #submit{
             margin-top: 10px;
             background-color: orange;
+            transition: background-color .7s;
+            color: black;
+            height: 40px;
+            width: 100px;
+            font-family: poppins;
+            font-size: 18px;
+            border-radius: 5px;
+            border-color: black;
+            cursor: pointer;
+        }
+        #submit:hover{
+            margin-top: 10px;
+            background-color: orangered;
             color: black;
             height: 40px;
             width: 100px;
@@ -127,7 +178,7 @@
             cursor: pointer;
         }
         #features{
-
+            margin-top: 70px;
         }
         .features-icons{
             width: 50px;
@@ -145,6 +196,74 @@
             margin-left: 30px;
             width: 50%;
         }
+        .price-boxes{
+            font-family: lato;
+            width: 250px;
+            justify-content: center;
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .product-title{
+            background-color: orange;
+            font-size: 20px;
+            padding: 10px;
+        }
+        .box-price{
+            margin-top: 15px;
+        }
+        .box-text{
+            font-size: 17px;
+            margin-top: 15px;
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+        .box-buttons{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background-color: orange;
+            transition: background-color .7s;
+            border-style: solid;
+            border-color: black;
+            font-size: 18px;
+            border-radius: 3px;
+            padding: 5px;
+        }
+        .box-buttons:hover{
+            cursor: pointer;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background-color: orangered;
+            border-style: solid;
+            border-color: black;
+            font-size: 18px;
+            border-radius: 3px;
+            padding: 5px;
+        }
+        footer{
+            font-family: lato;
+            margin-right: auto;
+            margin-left: auto;
+            width: 70%;
+            justify-content: flex-end;
+            border-radius: 3px;
+            padding: 15px;
+            background-color: orange;
+        }
+        span{
+            display: flex;
+            justify-content: flex-end;
+            font-size: 17px;
+        }
+        .footer-items{
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 17px;
+            list-style-type: none;
+        }
     </style>
 </head>
 <body>
@@ -152,8 +271,8 @@
         <img id="header-img" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="">
         <nav id="nav-bar">
                 <a class="nav-link" href="#features">Features</a>
-                <a class="nav-link" href="#">How it Works</a>
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#howItWorks">How it Works</a>
+                <a class="nav-link" href="#pricing">Pricing</a>
             </nav>
     </header>
     <section>
@@ -162,7 +281,7 @@
         </div>
         <form id="form" action=" https://www.freecodecamp.com/email-submit">
             <input type="email" name="email" id="email" placeholder="Insert your email" required><br>
-            <input id="submit"type="submit" name="submit" value="Let's Go!">
+            <input id="submit" type="submit" name="submit" value="Let's Go!">
         </form>
     </section>
     <section id="features">
@@ -191,6 +310,39 @@
     <section id="howItWorks">
         <iframe id="video" frameborder="0" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
     </section>
-    
+    <section id="pricing">
+        <div class="price-boxes">
+            <div class="product-title">
+                TENOR TROMBONE
+            </div>
+            <h2 class="box-price">$600</h2>
+            <div class="box-text">Lorem ipsum. Lorem ipsum. Lorem ipsum dolor. Lorem ipsum.</div>
+            <button class="box-buttons">SELECT</button>
+        </div>
+        <div class="price-boxes">
+            <div class="product-title">
+                BASS TROMBONE
+            </div>
+            <h2 class="box-price">$900</h2>
+            <div class="box-text">Lorem ipsum. Lorem ipsum. Lorem ipsum dolor. Lorem ipsum.</div>
+            <button class="box-buttons">SELECT</button>
+        </div>
+        <div class="price-boxes">
+            <div class="product-title">
+                VALVE TROMBONE
+            </div>
+            <h2 class="box-price">$1200</h2>
+            <div class="box-text">Lorem ipsum. Lorem ipsum. Lorem ipsum dolor. Lorem ipsum.</div>
+            <button class="box-buttons">SELECT</button>
+        </div>
+    </section>
+    <footer>
+        <ul class="footer-items">
+            <li href="#">Privacy</li>
+            <li href="#" style="margin-left: 7px;">Terms</li>
+            <li href="#" style="margin-left: 7px;">Contact</li>
+        </ul>
+        <span>Copyright 2022</span>
+    </footer>
 </body>
 </html>
